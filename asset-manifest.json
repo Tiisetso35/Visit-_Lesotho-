@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Visit-_Lesotho-/static/css/main.437db8b5.css",
+    "main.js": "/Visit-_Lesotho-/static/js/main.b42c3e39.js",
+    "index.html": "/Visit-_Lesotho-/index.html",
+    "main.437db8b5.css.map": "/Visit-_Lesotho-/static/css/main.437db8b5.css.map",
+    "main.b42c3e39.js.map": "/Visit-_Lesotho-/static/js/main.b42c3e39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.437db8b5.css",
+    "static/js/main.b42c3e39.js"
+  ]
+}
