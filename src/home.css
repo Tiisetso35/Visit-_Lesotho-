@@ -1,0 +1,144 @@
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f7f5;
+  color: #1f2d27;
+  line-height: 1.55;
+}
+section { scroll-margin-top: 64px; }
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.25rem;
+  background: #1f4d3a;
+}
+.brand { color: #fff; font-weight: 700; font-size: 1.15rem; text-decoration: none; }
+.nav-links { display: flex; gap: 1.25rem; }
+.nav-links a { color: #e3efe8; text-decoration: none; }
+.nav-links a:hover { color: #fff; text-decoration: underline; }
+.menu-toggle {
+  display: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #e3efe8;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background-color: #1f4d3a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.hero-content { max-width: 640px; padding: 2rem 1.5rem 2rem 6vw; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.1; margin: 0 0 1rem; }
+.hero p { font-size: 1.1rem; margin: 0 0 1.5rem; }
+.hero-btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  background: #f2c14e;
+  color: #1f2d27;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.hero-btn:hover { background: #e6b13a; }
+
+/* Sections */
+.section { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1rem 1rem; }
+.section h2 { margin: 0 0 1rem; font-size: 1.7rem; }
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+.facts div { background: #fff; padding: 1rem; border-radius: 8px; border-left: 4px solid #2e6b4f; }
+.facts dt { font-weight: 700; }
+.facts dd { margin: 0.2rem 0 0; color: #455a50; }
+
+/* Featured */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.featured-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  font: inherit;
+}
+.featured-item img { width: 100%; height: 200px; object-fit: cover; }
+.featured-name { padding: 0.8rem 1rem 0; font-weight: 700; font-size: 1.1rem; }
+.featured-location { padding: 0 1rem 1rem; color: #555; }
+
+/* Activities */
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.activity-list li { background: #fff; padding: 1rem; border-radius: 8px; }
+.activity-list h3 { margin: 0 0 0.3rem; font-size: 1.05rem; color: #2e6b4f; }
+.activity-list p { margin: 0; }
+
+.footer { margin-top: 3rem; padding: 1.5rem; text-align: center; background: #1f4d3a; color: #e3efe8; }
+.footer p { margin: 0; }
+
+/* Tablet and mobile */
+@media (max-width: 700px) {
+  .menu-toggle { display: block; }
+  .nav-links { display: none; width: 100%; flex-direction: column; gap: 0.6rem; padding-top: 0.8rem; }
+  .nav-links.open { display: flex; }
+  .hero { min-height: 60vh; }
+  .hero-content { padding: 2rem 1.25rem; }
+}
+
+/* Interaction polish */
+.card, .featured-item, .activity-list li { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card:hover, .featured-item:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #f2c14e;
+  outline-offset: 2px;
+}
+.enquire-btn {
+  margin-top: 0.75rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #2e6b4f;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.enquire-btn:hover { background: #245540; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .featured-item { transition: none; }
+}
