@@ -21,6 +21,12 @@ An interactive tourism website built with React.js that helps local and internat
 - Create React App (react-scripts)
 - Plain CSS
 
+## Live Demo
+
+Visit the project live here:
+
+https://tiisetso35.github.io/Visit-_Lesotho-/
+
 ## How to run
 
 You need Node.js 18 or newer.
